@@ -1,9 +1,0 @@
-name = "cloudflare"
-type = "webpack"
-account_id = "516319c9368a78fa0d1dbe546a2c12c7"
-route = ''
-zone_id = ''
-usage_model = ''
-compatibility_flags = []
-workers_dev = true
-compatibility_date = "2021-09-19"
