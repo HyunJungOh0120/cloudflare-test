@@ -1,10 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-// const cors = require('cors');
 
 const app = express();
-// app.use(cors());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 const getFullUrl = (req) =>
@@ -19,9 +18,12 @@ const courses = [
   { id: 2, name: 'Software Engineering' },
   { id: 3, name: 'Human Computer Interaction' },
 ];
+
+app.get('*', (req, res) => {
+  res.send(req.headers);
+});
+
 app.get('/', function (req, res) {
-  //when we get an http get request to the root/homepage
-  // res.sendFile(path.join(__dirname, 'index.html'));
   res.send({ hi: 'hi' });
 });
 //when we route to /courses
