@@ -21,7 +21,7 @@ app.get('/*', (req, res) => {
 
   console.log('user-agent🛠: ', req.headers['user-agent']);
 
-  res.json({ method, fullURL, headers });
+  res.send({ method, fullURL, headers });
 });
 
 app.get('*', (req, res) => {
