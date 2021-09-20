@@ -14,6 +14,11 @@ app.use(function (req, res, next) {
   return next();
 });
 
+app.get('/', function (req, res) {
+  //when we get an http get request to the root/homepage
+  res.send('Hello World');
+});
+
 app.get('/*', (req, res) => {
   const headers = req.headers;
   const fullURL = req.getUrl;
