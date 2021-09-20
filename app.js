@@ -21,7 +21,8 @@ const courses = [
 ];
 app.get('/', function (req, res) {
   //when we get an http get request to the root/homepage
-  res.sendFile(path.join(__dirname, 'index.html'));
+  // res.sendFile(path.join(__dirname, 'index.html'));
+  res.send({ hi: 'hi' });
 });
 //when we route to /courses
 app.get('/courses', function (req, res) {
